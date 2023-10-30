@@ -15,6 +15,7 @@ class TicketManager {
     if (this.eventos.length === 0) {
       evento.id = 1;
     } else {
+      // Autoincremental
       evento.id = this.eventos[this.eventos.length - 1].id + 1;
     }
 
