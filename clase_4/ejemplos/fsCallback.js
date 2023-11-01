@@ -1,11 +1,14 @@
 const fs = require("fs");
 
+// const fecha = new Date().toLocaleString();
+// console.log(fecha);
+
 fs.writeFile("./texto_callback.txt", "Escribiendo en un callback", (error) => {
   if (error) {
     return console.log("Hubo un error al escribir el archivo");
   }
 
-  fs.readFile("./texto_callbac.txt", "utf-8", (error, contenido) => {
+  fs.readFile("./texto_callback.txt", "utf-8", (error, contenido) => {
     if (error) {
       return console.log("Hubo un error al leer el archivo");
     }
