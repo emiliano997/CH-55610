@@ -1,0 +1,26 @@
+[
+	{
+		"nombre": "emi",
+		"apellido": "perez",
+		"username": "emiperez",
+		"password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+	},
+	{
+		"nombre": "yessi",
+		"apellido": "perez",
+		"username": "yessiperez",
+		"password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+	},
+	{
+		"nombre": "facu",
+		"apellido": "perez",
+		"username": "facuperez",
+		"password": "a848cb86ad610729944d06c68df7a87c4d6ffdf3f2d76ec428865c77e6f8568d"
+	},
+	{
+		"nombre": "paula",
+		"apellido": "perez",
+		"username": "pauperez",
+		"password": "4dcb736f06d0062c8f12f3664d073b55c915ffa449ca0a4d8b8721a899947e7c"
+	}
+]
