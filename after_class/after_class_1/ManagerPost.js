@@ -48,7 +48,7 @@ class ManagerPost {
       return console.log("El post no existe");
     }
 
-    const index = this.posts.findIndex(post);
+    const index = this.posts.findIndex((p) => p.id === id);
 
     try {
       this.posts.splice(index, 1);
@@ -85,6 +85,11 @@ async function fetchDatos() {
 
     const manager = new ManagerPost("./posts.json");
 
+    console.log(manager.getPosts());
+
+    manager.deletePost(13);
+
+    console.log(manager.getPosts());
     // console.log("Creando los posts");
     // for (let i = 0; i <= 12; i++) {
     //   const post = new Post(
