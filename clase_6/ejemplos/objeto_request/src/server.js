@@ -3,6 +3,8 @@ import express from "express";
 const app = express();
 const PORT = 5000;
 
+app.use(express.urlencoded({ extended: true }));
+
 const usuarios = [
   {
     id: 1,
@@ -46,11 +48,11 @@ app.get("/usuarios", (req, res) => {
   res.json(usuarios);
 });
 
-app.get("/usuarios/:id", (req, res) => {
-  // console.log(req.params);
-  const { id } = req.params;
+app.get("/usuarios/:id_user", (req, res) => {
+  console.log(req.params);
+  const { id_user } = req.params;
 
-  const usuario = usuarios.find((user) => user.id === Number(id));
+  const usuario = usuarios.find((user) => user.id === Number(id_user));
 
   if (usuario) {
     res.json(usuario);
