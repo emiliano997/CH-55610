@@ -40,8 +40,23 @@ app.get("/", (req, res) => {
   }
 
   res.send("Bienvenido invitado!");
+});
 
-  // res.send("Saludo desde el servidor");
+app.get("/usuarios", (req, res) => {
+  res.json(usuarios);
+});
+
+app.get("/usuarios/:id", (req, res) => {
+  // console.log(req.params);
+  const { id } = req.params;
+
+  const usuario = usuarios.find((user) => user.id === Number(id));
+
+  if (usuario) {
+    res.json(usuario);
+  }
+
+  res.json({ error: "User not found" });
 });
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
