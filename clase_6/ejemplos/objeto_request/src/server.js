@@ -27,6 +27,7 @@ const usuarios = [
 // res → response
 app.get("/", (req, res) => {
   // Ejemplo URL: http://localhost:5000/?nombre=Emiliano
+  // Ejemplo URL: http://localhost:5000/?clave=valor
   console.log(req.query.nombre); // ?key=valor
 
   const { nombre, edad, ciudad } = req.query;
@@ -44,11 +45,20 @@ app.get("/", (req, res) => {
   res.send("Bienvenido invitado!");
 });
 
-app.get("/usuarios", (req, res) => {
+app.get("/usuarios", async (req, res) => {
+  const { limit } = req.params;
+
+  // const datos = await getDatos()
+
+  if (limit) {
+    // Limitarian el array de productos
+  }
   res.json(usuarios);
 });
 
 app.get("/usuarios/:id_user", (req, res) => {
+  // Ejemplo URL: http://localhost:5000/usuarios/1
+  // Ejemplo URL: http://localhost:5000/usuarios/valor
   console.log(req.params);
   const { id_user } = req.params;
 
