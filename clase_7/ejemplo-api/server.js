@@ -88,4 +88,22 @@ app.put("/usuarios/:id", (req, res) => {
   });
 });
 
+app.delete("/usuarios/:id", (req, res) => {
+  const { id } = req.params;
+
+  const index = usuarios.findIndex((user) => user.id === Number(id));
+
+  if (index === -1) {
+    return res.json({
+      error: "User not found",
+    });
+  }
+
+  usuarios.splice(index, 1);
+
+  res.json({
+    status: "Usuario Eliminado",
+  });
+});
+
 app.listen(5000, () => console.log("Server listening on port 5000"));
