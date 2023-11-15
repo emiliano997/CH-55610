@@ -8,8 +8,26 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Ejemplos middlewares
+// function logger(req, res, next) {
+//   console.log("Servidor recibe peticion");
+//   next();
+// }
+
+// app.use(logger);
+
+// function middleware(req, res, next) {
+//   const { code, productName } = req.body;
+
+//   if (!code || code === "") {
+//     return res.json({
+//       error: "Esta el campo code vacio",
+//     });
+//   }
+// }
+
 // Ruta main
-app.get("/", (req, res) => {
+app.get("/", middleware, (req, res) => {
   res.json({
     mensaje: "Bienvenido",
   });
