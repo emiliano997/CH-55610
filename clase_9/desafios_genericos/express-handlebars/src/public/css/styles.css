@@ -1,0 +1,30 @@
+.message-success {
+  color: white;
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #4cae4c;
+}
+
+.form {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+}
+
+.form-input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+}
+
+.form-button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+}
