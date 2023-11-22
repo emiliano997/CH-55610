@@ -1,0 +1,14 @@
+<div>
+  {{#if isAdmin }}
+    Bienvenido admin
+    {{#each food }}
+      <div>
+        <p> {{ this.name }} </p>
+        <p> {{this.price }}</p>
+      </div>
+    {{/each}}
+
+  {{else}}
+    <p>No tenés acceso</p>
+  {{/if}}
+</div>
