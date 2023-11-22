@@ -28,3 +28,11 @@
   border-radius: 5px;
   box-shadow: 0 0 5px #000;
 }
+.button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+  text-decoration: none;
+  color: black;
+}
