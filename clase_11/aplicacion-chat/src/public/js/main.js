@@ -13,6 +13,7 @@ Swal.fire({
   allowOutsideClick: false,
 }).then((value) => {
   user = value.value;
+  socket.emit("inicio", user);
 });
 
 chatbox.addEventListener("keyup", (e) => {
@@ -22,6 +23,16 @@ chatbox.addEventListener("keyup", (e) => {
       message: e.target.value,
     });
     chatbox.value = "";
+  }
+});
+
+socket.on("connected", (data) => {
+  if (user !== undefined) {
+    Swal.fire({
+      text: `Nuevo usuario conectado: ${data}`,
+      toast: true,
+      position: "top-right",
+    });
   }
 });
 

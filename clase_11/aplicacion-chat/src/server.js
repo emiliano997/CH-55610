@@ -40,5 +40,10 @@ io.on("connection", (socket) => {
     io.emit("messages", messages);
   });
 
+  socket.on("inicio", (data) => {
+    io.emit("messages", messages);
+    socket.broadcast.emit("connected", data);
+  });
+
   socket.emit("messages", messages);
 });
