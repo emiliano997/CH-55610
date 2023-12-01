@@ -21,9 +21,17 @@ form.addEventListener("submit", (e) => {
 socket.on("posts", (data) => {
   const posts = document.querySelector("#posts");
 
-  posts.innerHTML = "";
-
-  data.forEach((post) => {
-    posts.innerHTML += `Id: ${post.id} - User id: ${post.userId} - Title: ${post.title} - Body: ${post.body} <button class="eliminar"> Eliminar </button>  <br> `;
-  });
+  posts.innerHTML = data
+    .map((post) => {
+      return `
+      <p>
+        Id: ${post.id} -
+        User id: ${post.id} -
+        Title: ${post.title} -
+        Body: ${post.body} -
+        <button id="button-${post.id}> Eliminar </button>
+      </p>
+    `;
+    })
+    .join(" ");
 });
