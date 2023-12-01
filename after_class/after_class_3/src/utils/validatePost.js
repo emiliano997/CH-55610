@@ -29,3 +29,29 @@ function validatePost(req, res, next) {
 }
 
 export { validatePost };
+
+function validatePostSocket({ userId, id, title, body }) {
+  if (!userId) {
+    return res.json({
+      error: "User id is required",
+    });
+  }
+
+  if (!id) {
+    return res.json({
+      error: "Id is required",
+    });
+  }
+
+  if (!title) {
+    return res.json({
+      error: "Title is required",
+    });
+  }
+
+  if (!body) {
+    return res.json({
+      error: "Body is required",
+    });
+  }
+}

@@ -1,0 +1,29 @@
+<div>
+  <h1>
+    Post
+  </h1>
+
+  <form>
+    <input type="number" name="userId" id="userId" placeholder="User id">
+    <input type="number" name="id" id="id" placeholder="Post id">
+    <input type="text" name="title" id="title" placeholder="Post title">
+    <input type="text" name="body" id="body" placeholder="Post body">
+    <input type="submit" value="Send">
+  </form>
+
+  
+  <h2>Post list </h2>
+  <div id="posts"></div>
+
+  {{!-- <table>
+    <tr>
+      <th>Id</th>
+      <th>User id</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </table> --}}
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
+</div>
