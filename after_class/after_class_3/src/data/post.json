@@ -1,0 +1,14 @@
+[
+	{
+		"userId": 1,
+		"id": 2,
+		"title": "New post",
+		"body": "This is a new post"
+	},
+	{
+		"userId": 1,
+		"id": 3,
+		"title": "New post",
+		"body": "This is a new post"
+	}
+]
