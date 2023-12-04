@@ -1,0 +1,8 @@
+> use desafiosDB
+
+> db.createCollection("estudiantes")
+
+> db.estudiantes.insertMany([ { nombre: "Emiliano", apellido: "Perez", curso: "A1", correo: "emi@gmail.com"}, { nombre: "Yessi", apellido: "Perez", curso: "A1", correo: "yessi@gmail.com"}, { nombre: "Facu", apellido: "Perez", curso: "A1", correo: "facu@gmail.com"}, { nombre: "Pau", apellido: "Perez", curso: "A1", correo: "pau@gmail.com"}, { nombre: "Eze", apellido: "Caraballo", curso: "B1", correo: "eze@gmail.com"} ])
+
+
+> db.estudiantes.find()

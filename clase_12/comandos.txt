@@ -1,0 +1,20 @@
+- Mostrar Bases de Datos
+> show dbs
+
+- Crear/Usar base de datos
+> use primerDB
+
+- Mostrar Colecciones dentro de la base de Datos
+> show collections
+
+- Crear coleccion dentro de la base de datos
+> db.createCollection("usuarios")
+
+- Insertar un documento
+> db.usuarios.insertOne({ username:"emiperez", email: "emi.perez997@gmail.com })
+
+- Mostrar todos los documentos
+> db.usuarios.find()
+
+- Insertar varios documentos
+> db.usuarios.insertMany([ { username:"pepito", email: "pepito@gmail.com }, { username:"pablito", email: "pablito@gmail.com } ])
