@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "curso": "Fullstack",
+    "edad": 25,
+    "correo": "juan@gmail.com",
+    "sexo": "H"
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Gomez",
+    "curso": "Frontend",
+    "edad": 30,
+    "correo": "ana@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Gonzalez",
+    "curso": "Backend",
+    "edad": 35,
+    "correo": "pedro@gmail.com",
+    "sexo": "H"
+  },
+  {
+    "nombre": "Maria",
+    "apellido": "Rodriguez",
+    "curso": "Fullstack",
+    "edad": 40,
+    "correo": "maria@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Jose",
+    "apellido": "Fernandez",
+    "curso": "Frontend",
+    "edad": 45,
+    "correo": "jose@gmail.com",
+    "sexo": "H"
+  }
+]

@@ -1,0 +1,27 @@
+> db.clientes.find({}).sort({ edad: -1 })
+
+> db.clientes.find().sort({ edad: 1 }).limit(1)
+
+> db.clientes.find().sort({ edad: 1 }).skip(1).limit(2)
+
+> db.clientes.find({ nombre: "Juan" })
+
+> db.clientes.find({ $and: [ { nombre: "Juan"}, { edad: 29} ] })
+
+> db.clientes.find({ $or: [ { nombre: "Juan" }, { nombre: "Lucia" } ] })
+
+> db.clientes.find({ edad: { $gt: 25 } })
+
+> db.clientes.find({ edad: { $lte: 25 } })
+
+> db.clientes.find({ edad: { $ne: 25 } })
+
+> db.clientes.find({ $and: [{ edad: { $gt: 25 }}, { edad: { $lte: 35 } }] })
+
+> db.clientes.updateOne({ _id: ObjectId() }, { $set: { edad: 36 } })
+ 
+> db.clientes.find({ $and: [{ edad: { $gt: 25 }}, { edad: { $lte: 35 } }] })
+
+> db.clientes.updateMany({ edad: 25 }, { $set: { edad: 26 }})
+
+> db.clientes.deleteMany({ nombre: "Juan" })

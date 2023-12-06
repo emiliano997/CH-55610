@@ -1,0 +1,56 @@
+[
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "curso": "Fullstack",
+    "edad": 25,
+    "correo": "juan@gmail.com",
+    "sexo": "H",
+    "notas": [2, 3, 10, 7]
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Gomez",
+    "curso": "Frontend",
+    "edad": 30,
+    "correo": "ana@gmail.com",
+    "sexo": "M",
+    "notas": [5, 6, 10]
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Gonzalez",
+    "curso": "Backend",
+    "edad": 35,
+    "correo": "pedro@gmail.com",
+    "sexo": "H",
+    "notas": [4, 8, 10, 4]
+  },
+  {
+    "nombre": "Maria",
+    "apellido": "Rodriguez",
+    "curso": "Fullstack",
+    "edad": 40,
+    "correo": "maria@gmail.com",
+    "sexo": "M",
+    "notas": [1, 1, 6, 8],
+    "direccion": {
+      "calle": "Av. Siempre Viva",
+      "numero": 720,
+      "ciudad": "Springfield"
+    }
+  },
+  {
+    "nombre": "Jose",
+    "apellido": "Fernandez",
+    "curso": "Frontend",
+    "edad": 45,
+    "sexo": "H",
+    "notas": [2, 3, 7, 4],
+    "direccion": {
+      "calle": "Av. Siempre Viva",
+      "numero": 742,
+      "ciudad": "Springfield"
+    }
+  }
+]

@@ -1,0 +1,87 @@
+> use filtros
+
+Common filters
+> db.estudiantes.find({ $and: [ { curso: "Frontend" }, { edad: { $gte: 30 } }  ] }) 
+
+> db.estudiantes.find({ $or: [ { curso: "Fullstack" }, { edad: { $eq: 30 } } ] })
+
+> db.estudiantes.find({ $or: [ { curso: "Fullstack" }, { edad: { $ne: 30 } } ] })
+
+> db.estudiantes.find({ correo: { $exists: true } })
+
+> db.estudiantes.find({ correo: { $exists: false } })
+
+Array filters
+
+> db.estudiantes.find({ notas: { $in: [1, 2] } })
+
+> db.estudiantes.find({ notas: { $nin: [10] } })
+
+> db.estudiantes.find({ notas: { $size: 4 } })
+
+> db.estudiantes.find({ notas: { $size: 3 } })
+
+> db.estudiantes.find({ notas: { $all: [1, 1] } })
+
+> db.estudiantes.find({ notas: { $all: [2, 4] } })
+
+> db.estudiantes.find({ notas: { $elemMatch: { $gte: 7, $lt: 10 } } })
+
+> db.estudiantes.find({ notas: { $elemMatch: { $gte: 1, $lt: 5 } } })
+
+Others queries
+
+> db.estudiantes.disctinct("nombre")
+
+> db.estudiantes.disctinct("curso")
+
+> db.estudiantes.find({ "direccion.numero": 720 })
+
+> db.estudiantes.find({ "direccion.ciudad": "Springfield })
+
+Esta expresion regular busca un nombre que contenga una a minuscula
+> db.estudiantes.find({ nombre: /.*a.*/ }) 
+
+Proyecciones
+> db.estudiantes.find({ curso: "Fullstack"  }, { nombre: 1, apellido: 1, correo: 1, _id: 0 })
+
+> db.estudiantes.find({ curso: "Frontend"  }, { nombre: 1, apellido: 1, correo: 1, _id: 0 })
+
+Siempre ordena por el primer campo que le pasemos
+> db.estudiantes.find({ curso: "Frontend"  }, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).sort({ nobmre: 1, edad: 1 })
+
+> db.estudiantes.find({ curso: "Frontend"  }, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).sort({ edad: -1 })
+
+> db.estudiantes.find({}, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).skip(0).limit(2)
+
+> db.estudiantes.find({}, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).skip(1).limit(2)
+
+Agregamos un alumno solo con nombre
+> db.estudiantes.insertOne({ nombre: "Felipe" })
+
+> db.estudiantes.find({ sexo: "H" })
+
+Update
+> db.estudiantes.updateOne({ _id: ObjectId('656fe7b6ae0b113d10e003f8') }, { $set: { nombre: "Emiliano" } })
+
+Inserta un campo con la fecha actual
+"lastModified" Es el nobmre del campo asignado
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $currentDate: { "lastModified": true } })
+
+Eliminamos el campo creado
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $unset: { "last": true } })
+
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $rename: { "lastModified": "last" } })
+
+Si el campo especificado tiene un valor más chico que el que le pasamos, lo actualiza, sino, no
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $max: { "edad": 20 } })
+
+Lo mismo que el anterior pero a la inversa
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $min: { "edad": 20 } })
+
+Multiplica el valor del campo por el numero dado
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $mul: { "edad": 2 } })
+
+Suma el numero dado
+> db.estudiantes.updateOne({ _id: ObjectId('656fea6a3209bd1385260dba') }, { $inc: { "edad": 2 } })
+
