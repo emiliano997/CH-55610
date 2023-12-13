@@ -1,0 +1,56 @@
+<div>
+  
+  <div class="m-3 justify-center">
+
+    {{!-- {{#if message}}
+    <div class="m-2 alert alert-{{ style }}">
+      {{ message }}
+    </div>
+    {{/if}} --}}
+    <div>
+    <form class="row p-3" action="/api/products" method="post">
+      <input class="form-control m-1" type="text" name="title" placeholder="Title" id="title">
+      <input class="form-control m-1 " type="text" name="description" placeholder="Description" id="description">
+      <input class="form-control m-1" type="number" name="price" placeholder="Price" id="stock">
+      <input class="form-control m-1 " type="text" name="thumbnail" placeholder="Thumbnail" id="thumbnail">
+      <input class="form-control m-1 " type="text" name="code" placeholder="Code" id="code">
+      <input class="form-control m-1" type="number" name="stock" placeholder="Stock" id="stock">
+      <input class="btn btn-primary m-2" type="submit" value="Send" id="send">
+    </form>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="p-2">
+
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th> # </th>
+          <th> Title </th>
+          <th> Description </th>
+          <th> Price </th>
+          <th> Thumbnail </th>
+          <th> Code </th>
+          <th> Stock </th>
+          
+        </tr>
+      </thead> 
+      <tbody>
+        {{#each products}}
+          <tr>
+            <td>  {{ _id }}</td> 
+            <td> {{ title }} </td>
+            <td> {{ description }} </td>
+            <td> {{ price }} </td>
+            <td> <img src="{{ thumbnail }}" alt="" class="img-fluid"> </td>
+            <td> {{ code }} </td>
+            <td> {{ stock }} </td> 
+          </tr>
+        {{/each}}
+
+    </table>
+
+  </div>
+</div>

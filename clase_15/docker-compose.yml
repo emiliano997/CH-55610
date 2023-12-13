@@ -1,0 +1,10 @@
+services:
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    volumes:
+      - "MONGO_DATA:/data/db"
+
+volumes:
+  MONGO_DATA:
