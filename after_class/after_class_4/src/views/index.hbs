@@ -1,0 +1,28 @@
+<div>
+  <h1> After Class </h1>
+
+  <div>
+  <h2>Posts</h2>
+  <hr>
+  {{#each posts }}
+    <div style="display: flex; gap: 5px">
+      <strong>Title</strong> {{ this.title }} <br>
+      <strong>Content</strong> {{ this.content }} <br>
+      <strong>Author ID</strong> {{ this.author }}
+    </div>
+  {{/each}}
+  </div>
+
+  <h2>Users</h2>
+  <hr>
+  {{#each users }}
+    <div>
+      <strong>Username</strong> {{ this.username }} <br>
+      <strong>Email</strong> {{ this.email }} <br>
+      <strong>Name</strong> {{ this.name }}
+    </div>
+
+    
+    
+  {{/each}}
+</div>
