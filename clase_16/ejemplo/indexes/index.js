@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import { userModel } from "./models/user.model.js";
 import { courseModel } from "./models/course.model.js";
 
-const url =
-  "mongodb+srv://test:test@curso-nodejs.de1bv.gcp.mongodb.net/CoderPrueba?retryWrites=true&w=majority";
+const url = "";
 
 // const entorno = async () => {
 //   await mongoose.connect(url);
