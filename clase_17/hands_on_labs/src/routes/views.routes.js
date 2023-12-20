@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
 router.get("/students", async (req, res) => {
   const { page, limit } = req.query;
 
+  // const order = "asc" - 1
   const students = await studentModel.paginate(
     {
       // Criterio de busqueda
@@ -20,6 +21,7 @@ router.get("/students", async (req, res) => {
       limit: limit || 10,
     }
   );
+  // .sort({ price: 1})
   console.log(students);
 
   res.render("students", {
