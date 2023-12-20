@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import mongoosePaginate from "mongoose-paginate-v2";
 
 const studentSchema = new Schema({
   first_name: String,
@@ -8,6 +9,8 @@ const studentSchema = new Schema({
   grade: Number,
   group: String,
 });
+
+studentSchema.plugin(mongoosePaginate);
 
 const studentModel = model("students", studentSchema);
 

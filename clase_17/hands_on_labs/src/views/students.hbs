@@ -25,6 +25,33 @@
     </tbody>
 
   </table>
+  <div class="position-relative m-4">
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        {{#if students.hasPrevPage}}
+          <li class="page-item"><a
+              class="page-link"
+              href="/students?page={{students.prevPage}}&&limit=10"
+            >Previous</a></li>
+        {{/if}}
+
+        {{!-- Links a siguientes páginas --}}
+
+        {{#if students.hasNextPage}}
+          <li class="page-item"><a
+              class="page-link"
+              href="/students?page={{students.nextPage}}&&limit=10"
+            >Next</a></li>
+        {{/if}}
+
+      </ul>
+    </nav>
+    <p class="btn btn-primary">
+      Current Page:
+      {{students.page}}
+    </p>
+  </div>
  
   </div>
 </div>

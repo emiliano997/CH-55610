@@ -11,7 +11,7 @@ const app = express();
 
 // Mongo Local
 mongoose
-  .connect("mongodb://127.0.0.1:27017/Students")
+  .connect("mongodb://127.0.0.1:27017/Colegio")
   .then(() => console.log("Connected to Mongo"))
   .catch((error) => console.log(error));
 
@@ -34,4 +34,4 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", viewsRoutes);
 
-app.listen(4000, console.log("Server running on port 4000"));
+app.listen(8000, console.log("Server running on port 8000"));
